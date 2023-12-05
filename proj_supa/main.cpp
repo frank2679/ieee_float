@@ -1,5 +1,4 @@
 #include "supa.h"
-#include <helper_supa.h>
 #include <math.h>
 #include <stdio.h>
 __global__ void add(float *a, float *b, float *c) {
@@ -69,9 +68,8 @@ int main(void) {
     // Final check
     for (int i = 0; i < numElements; ++i) {
         if (fabs(h_A[i] + h_B[i] - h_C[i]) > 1e-5) {
-            fprintf(stderr, "Result verification failed at element %d!\n", i);
-            C_ERROR_LABEL;
-            return EXIT_FAILURE;
+          fprintf(stderr, "Result verification failed at element %d!\n", i);
+          return EXIT_FAILURE;
         }
     }
 
@@ -86,6 +84,5 @@ int main(void) {
     free(h_A);
     free(h_B);
     free(h_C);
-    C_OK_LABEL;
     return EXIT_SUCCESS;
 }
