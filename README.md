@@ -17,6 +17,7 @@
 - [x] 英伟达 GPU 是如何处理 subnormal number 的：结果正确
 - [ ] 英伟达 GPU 内部是硬件支持还是软件实现的 subnormal number 计算
 - [ ] 什么情况下出现 subnormal number
+- [ ] 如何理解 fp32 精度只有小数位 6-7 位
 
 ## 2. FP32 基本概念
 
